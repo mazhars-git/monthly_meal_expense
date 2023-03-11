@@ -59,23 +59,22 @@
 
         <!--------Form section------------>
         <section class="mt-12 pb-3">
-            <div class="grid grid-cols gap-4 w-9/12 mx-auto text-white">
+            <div class="grid grid-cols gap-4 w-9/12 mx-auto">
                 <div class="bg-blue-500 p-8 rounded-md">
-                    <h1 class="text-3xl font-bold mb-2">Input Data</h1>    
+                    <h1 class="text-3xl font-bold mb-2 text-white">Input Data</h1>    
                     <form>
                         <input class="mb-3 p-1.5" type="text" name="" id="user-name" placeholder="Name">
-                        <input class="mb-3 p-1.5" type="text" name="" id="user-name" placeholder="Total Meal">
-                        <input class="mb-3 p-1.5" type="text" name="" id="user-name" placeholder="Total Spend">
-                        <input class="mb-3 p-1.5" type="text" name="" id="user-name" placeholder="Others">
-                        <button class="block bg-green-500 p-2 rounded-md" type="submit">Submit</button>
-                    </form>               
-                    
+                        <input class="mb-3 p-1.5" type="number" name="" id="user-meal" placeholder="Total Meal">
+                        <input class="mb-3 p-1.5" type="number" name="" id="user-spend" placeholder="Total Spend">
+                        <input class="mb-3 p-1.5" type="number" name="" id="user-others" placeholder="Others">
+                        <button id="submit-data" class="block bg-green-500 py-2 px-5 rounded-md" type="submit">Submit</button>
+                    </form> 
                 </div>
             </div>
         </section>
 
    </main>
 
-    
+    <script src="Js/input_data.js"></script>
 </body>
 </html>
