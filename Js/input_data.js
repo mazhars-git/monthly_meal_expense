@@ -1,16 +1,21 @@
-document.getElementById('submit-data').addEventListener('click', function (e) {
-    e.preventDefault();
-    console.log('clicked in data submission')
-    const name = document.getElementById('user-name');
-    const user = name.value;
+document.getElementById('submit-btn').addEventListener('click', function () {
+
+    const depositField = document.getElementById('deposit-field');
+    const depositAmount = depositField.value;
+
+    console.log(depositAmount)
 
 
     //get user name
 
-    const userName = document.getElementById('set-name');
-    const userField = userName.innerText;
-    userName.innerText = user;
+    const depositTotalField = document.getElementById('deposit-total');
+    const depositTotal = depositTotalField.innerText;
+    const newDeposit = depositAmount + depositTotal;
 
-    console.log()
+    depositTotalField.innerText = newDeposit;
+       
+
+    depositField.value = '';
+    console.log(newDeposit)
 
 })
