@@ -1,7 +1,10 @@
 document.getElementById('submit-btn').addEventListener('click', function () {
 
     const depositField = document.getElementById('deposit-field');
-    const depositAmount = depositField.value;
+    const depositAmountStr = depositField.value;
+    const depositAmount = parseFloat(depositAmountStr);
+
+
 
     console.log(depositAmount)
 
@@ -9,13 +12,13 @@ document.getElementById('submit-btn').addEventListener('click', function () {
     //get user name
 
     const depositTotalField = document.getElementById('deposit-total');
-    const depositTotal = depositTotalField.innerText;
-    const newDeposit = depositAmount + depositTotal;
+    const previousDepositStr = depositTotalField.innerText;
+    const previousDeposit = parseFloat(previousDepositStr);
+    const currentDeposit = depositAmount + previousDeposit;
 
-    depositTotalField.innerText = newDeposit;
+    depositTotalField.innerText = currentDeposit;
        
 
     depositField.value = '';
-    console.log(newDeposit)
 
 })
